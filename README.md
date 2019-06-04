@@ -1,2 +1,2 @@
 # reactclickgame
-click game for reac
+click game for react
