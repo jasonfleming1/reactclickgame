@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+//================ IMPORT ================
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from 'react';
+import data from "./data.json";
+import Wrapper from "./components/Wrapper";
+import Clicker from "./components/Clicker";
+import Nav from "./components/Nav";
+
+//================ FUNCTIONALITY  ================
+
+// setting this.state.data to the data json array
+class App extends Component {
+  state = {
+    data
+  }
+
+  render() {
+    return (
+      <Wrapper>
+        <Nav>Princess Clicker</Nav>
+        {this.state.data.map(data => (
+          <Clicker
+            id={data.id}
+            image={data.image}
+          />
+        ))}
+      </Wrapper>
+    );
+  }
 }
 
 export default App;
