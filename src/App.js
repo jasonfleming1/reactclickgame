@@ -2,7 +2,8 @@
 
 import React, { Component } from 'react';
 import princesses from "./princesses.json";
-import Footer from "./components/Footer"
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 
 //================ FUNCTIONALITY  ================
 
@@ -15,6 +16,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Navbar />
         <h1>Hello</h1>
         <Footer />
       </div>
