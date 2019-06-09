@@ -1,12 +1,18 @@
 
 /******* CARD ********/
   .card {
-    background: #fad3d9;
+    /*background: #fad3d9;*/
+    background:
+    /* top, transparent red, faked with gradient */
+    linear-gradient(rgba(241, 141, 158, .25),
+      rgba(255, 255, 255, .8)),
+    /* bottom, image */
+    url(https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif);
     background-size: cover;
     background-position: center;
     width: 175px;
     height: 175px;
-    border: 7px solid #5BC8AC;
+    border: 7px solid #ffffff;
     border-radius: 11px;
     cursor: pointer;
     transition: 0.4s;

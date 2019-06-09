@@ -26,7 +26,6 @@ class App extends Component {
 // shuffle data | https://www.frankmitchell.org/2015/01/fisher-yates/
 
 
-
 // reset game | use .map (readme.6)
 
 // handleClickEvent | 

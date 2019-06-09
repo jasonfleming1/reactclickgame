@@ -5,9 +5,7 @@ import "./footer.css";
 //============ CONTENT ============
 const Footer = () => (
     <footer className="footer">
-        <div className="footerContent">
-            Princess Clicker
-        </div>
+        <p id="appName">Princess Clicker</p>
     </footer>
 );
 
