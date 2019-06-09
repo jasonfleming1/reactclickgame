@@ -12,5 +12,7 @@ const Card = (props) => (
     </div>
 );
 
+//need to add onclick when functional
+
 //============ EXPORT ============
 export default Card;

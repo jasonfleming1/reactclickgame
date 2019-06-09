@@ -1,0 +1,44 @@
+
+/******* CARD ********/
+  .card {
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+    margin: 5px 25px;
+    border: 7px solid hotpink;
+    border-radius: 11px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  /* https://tobiasahlin.com/blog/how-to-animate-box-shadow/ */
+
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  }
+
+  .card::after {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .card:hover::after {
+    opacity: 1;
+  }
+
+  
+  /******* MEDIA BREAKS ********/
+  @media (max-width: 750px) {
+    .card {
+        margin: 8px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .card {
+        margin: 8px;
+    }
+  }
