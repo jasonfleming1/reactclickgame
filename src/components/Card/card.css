@@ -1,12 +1,12 @@
 
 /******* CARD ********/
   .card {
+    background: #fad3d9;
     background-size: cover;
     background-position: center;
-    width: 200px;
-    height: 200px;
-    margin: 5px 25px;
-    border: 7px solid hotpink;
+    width: 175px;
+    height: 175px;
+    border: 7px solid #5BC8AC;
     border-radius: 11px;
     cursor: pointer;
     transition: 0.4s;
@@ -27,17 +27,4 @@
 
   .card:hover::after {
     opacity: 1;
-  }
-
-  /******* MEDIA BREAKS ********/
-  @media (max-width: 750px) {
-    .card {
-        margin: 8px;
-    }
-  }
-
-  @media (max-width: 500px) {
-    .card {
-        margin: 8px;
-    }
   }

@@ -10,7 +10,5 @@ const Wrapper = (props) => (
     </Container>
 );
 
-//<main className="wrapper">{props.children}</main>
-
 //============ EXPORT ============
 export default Wrapper;

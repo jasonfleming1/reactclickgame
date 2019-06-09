@@ -3,10 +3,10 @@ import React from "react";
 import "./footer.css";
 
 //============ CONTENT ============
-const Footer = (props) => (
+const Footer = () => (
     <footer className="footer">
-        <div className="footerBackground">
-            <span className="footerText">Princess Clicker</span>
+        <div className="footerContent">
+            Princess Clicker
         </div>
     </footer>
 );

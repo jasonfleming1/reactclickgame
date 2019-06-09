@@ -1,7 +1,13 @@
 .header {
-    min-height: 100px;
-    background: hotpink;
+    background: #F18D9E;
+    font-size: 20px;
+    color: white;
+    border-bottom: 7px solid #5BC8AC;
+    box-shadow: 0 11px 6px -6px #5BC8AC;
+    text-align: center;
+    padding: 20px;
     position: relative;
+    height: auto;
   }
 
   h1 {
