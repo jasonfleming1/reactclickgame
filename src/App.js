@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import data from "./data.json"; //princesses.json was too long
 import Wrapper from "./components/Wrapper";
 import Card from "./components/Card";
-//import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -24,7 +23,6 @@ class App extends Component {
   }*/
 
 // shuffle data | https://www.frankmitchell.org/2015/01/fisher-yates/
-
 
 // reset game | use .map (readme.6)
 
