@@ -1,7 +1,7 @@
 //================ IMPORT ================
 import React, { Component } from 'react';
 import data from "./data.json"; //princesses.json was too long
-//import Wrapper from "./components/Wrapper";
+import Wrapper from "./components/Wrapper";
 import Card from "./components/Card";
 //import Navbar from "./components/Navbar";
 import Header from "./components/Header";
@@ -39,6 +39,7 @@ class App extends Component {
     return (
       <div>
         <Header />
+        <Wrapper>
           {this.state.data.map(data => (
             <Card 
               key={data.id}
@@ -46,6 +47,7 @@ class App extends Component {
               image={data.image}
               />
           ))}
+          </Wrapper>
       </div>
     );
   }
