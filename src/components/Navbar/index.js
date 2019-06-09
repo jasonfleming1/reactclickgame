@@ -1,14 +1,20 @@
 //============ IMPORTS ============
 import React from "react";
-import "./Navbar.css"
+import "./navbar.css"
 
-//============ Navbar ============
-const Navbar = () => (
+//============ CONTENT ============
+const Navbar = (props) => (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <h1 className="title">"Princes Clicker"</h1>
+        <ul>
+            <li classNmae="brand">
+                <a href="/">Princess Clicker</a>
+            </li>
+            <li>
+                Score: | Top Score:
+            </li>
+        </ul>
     </nav>
 );
-
 
 //============ EXPORT ============
 export default Navbar();

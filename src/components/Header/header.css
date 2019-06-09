@@ -1,0 +1,10 @@
+.header {
+    min-height: 100px;
+    background: hotpink;
+    position: relative;
+  }
+
+  h1 {
+      color: black;
+  }
+  
