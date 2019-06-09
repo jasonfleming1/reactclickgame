@@ -29,7 +29,6 @@
     opacity: 1;
   }
 
-  
   /******* MEDIA BREAKS ********/
   @media (max-width: 750px) {
     .card {

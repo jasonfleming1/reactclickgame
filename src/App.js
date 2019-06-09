@@ -1,11 +1,11 @@
 //================ IMPORT ================
 import React, { Component } from 'react';
 import data from "./data.json"; //princesses.json was too long
-import Wrapper from "./components/Wrapper";
+//import Wrapper from "./components/Wrapper";
 import Card from "./components/Card";
-import Navbar from "./components/Navbar";
+//import Navbar from "./components/Navbar";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
+//import Footer from "./components/Footer";
 
 
 //================ FUNCTIONALITY  ================
@@ -38,18 +38,14 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar score={this.state.score} highScore={this.state.highScore} />
         <Header />
-        <Wrapper>
-        {this.state.data.map(data => (
-          <Card 
-            key={data.id}
-            id={data.id}
-            image={data.image}
-            />
-        ))}
-        </Wrapper>
-        <Footer />
+          {this.state.data.map(data => (
+            <Card 
+              key={data.id}
+              id={data.id}
+              image={data.image}
+              />
+          ))}
       </div>
     );
   }
