@@ -15,9 +15,9 @@ class App extends Component {
     data,
     score: 0,
     highScore: 0,
+    clicked: [],
     alert: "Click a princess to begin!",
-    isCorrect: "",
-    isClicked: [],
+    
   }
 
   //Don't click the same princess twice!
@@ -35,31 +35,51 @@ class App extends Component {
       data[i] = data[j];
       data[j] = temp;
     }
-    return data;
+    return (data);
   }
 
   // reset game | use .map (readme.6)
   resetGame = () => {
-    if (this.state.score > this.state.highScore) {
-      this.setState({highScore: this.setState.score})
-    }
-      this.setState({isClicked: []})
-      this.setState({score: 0})
-      this.setState({isCorrect: ""})
-      this.setState({alert: "Click a princess to begin!"})
-    } // ==> end resetGame
-
-  // handle alert | reply to user
+    this.setState({
+      alert: "Too bad! let's try again",
+      highScore: Math.max(this.state.score, this.state.highScore),
+      score: 0,
+      data: data,
+    })
+  }
 
   // handleClickEvent | 
-    handleClickEvent = Card => {
-      //alert("click 123") 
-    }
-
+    handleClickEvent = name => {
+      //alert("This Card's id is " + Card + this.state.name)
+      let isCorrect = false;
+      const newData = this.state.data.map(data => {
+        const newCard = {...data};
+        if (newCard.name === name)
+          if (!newCard.clicked) {
+            console.log("Already guessed this princess");
+            newCard.clicked = true;
+            isCorrect = true;
+          }
+          return newCard;
+      })
+    console.log("Guess Correct! ", isCorrect);
+    isCorrect ? this.handleCorrectGuess(newData) : this.handleIncorrectGuess(newData);
+	}
   // handle correct guess | increment score
+  handleCorrectGuess = newData => {
+    this.setState({ 
+      data: this.shuffle(newData),
+      score: this.state.score +1,
+      alert: "Nice One! Keep going!"
+    })
+  }
 
   // handle incorrect guess | 
+  handleIncorrectGuess = () => {
 
+    this.resetGame();
+  }
+  
   // hint: begin building a non-functioning static version then add interactions
 
   render() {
@@ -69,8 +89,8 @@ class App extends Component {
         <Wrapper>
           {this.state.data.map(data => (
             <Card 
-              key={data.id}
-              id={data.id}
+              key={data.name}
+              name={data.name}
               image={data.image}
               handleClickEvent={this.handleClickEvent}
               />

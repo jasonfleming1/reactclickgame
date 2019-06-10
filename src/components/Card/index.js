@@ -8,7 +8,7 @@ const Card = (props) => (
         <img className="card-img-top"
         alt="princess" 
         src={props.image} 
-        onClick={() => props.handleClickEvent(props.id)}
+        onClick={() => props.handleClickEvent(props.name)}
         id={props.id} />
     </div>
 );
