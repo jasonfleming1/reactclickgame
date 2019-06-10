@@ -13,7 +13,7 @@
   #brand {
     color: white;
     font-size: 55px;
-    font-weight: 900;
+    font-weight: bolder;
     font-family: 'Poiret One', cursive;
   }
 
@@ -27,18 +27,63 @@
 
     #scoreBoard {
       color: white;
-      font-size: 35px;
+      font-size: 25px;
       font-weight: 900;
-      font-family: 'Poiret One', cursive;
-      padding-top: 20px;
+      font-family: 'Source Sans Pro', sans-serif;
+      padding-top: 25px;
     }
-  
-  /*
+   
+  /******* MEDIA QUERIES ********/
 
-  header {
-    background: #ffffff;
-    border-bottom: 2px solid #cccccc;
-    overflow: hidden;
-    margin-bottom: 40px;
-}
-  */
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    #brand {
+      font-size: 30px;
+    }
+    #alert {
+      font-size: 15px;
+    }
+    #scoreBoard {
+      font-size: 15px;
+    }
+  }
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (max-width: 600px) {
+    #brand {
+      font-size: 30px;
+    }
+    #alert {
+      font-size: 15px;
+    }
+    #scoreBoard {
+      font-size: 15px;
+    }
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (max-width: 768px) {
+    #brand {
+      font-size: 30px;
+    }
+    #alert {
+      font-size: 15px;
+    }
+    #scoreBoard {
+      font-size: 15px;
+    }
+  }
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (max-width: 992px) {
+    #brand {
+      font-size: 45px;
+    }
+    #alert {
+      font-size: 20px;
+    }
+    #scoreBoard {
+      font-size: 20px;
+    }
+  }
+

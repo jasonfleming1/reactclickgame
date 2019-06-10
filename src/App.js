@@ -15,18 +15,19 @@ class App extends Component {
     data,
     score: 0,
     highScore: 0,
-    alert: "Don't click the same princess twice!",
+    alert: "Click a princess to begin!",
     isCorrect: "",
     isClicked: [],
   }
 
-// componentDidMount | display and shuffle data
+  //Don't click the same princess twice!
+
+  // componentDidMount | display and shuffle data
   componentDidMount(){
     this.setState({ data: this.shuffle(this.state.data)})
   }
 
-// shuffle data | https://www.frankmitchell.org/2015/01/fisher-yates/
-
+  // shuffle data | https://www.frankmitchell.org/2015/01/fisher-yates/
   shuffle = data => {
     for (let i = data.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -37,36 +38,41 @@ class App extends Component {
     return data;
   }
 
-
-// reset game | use .map (readme.6)
+  // reset game | use .map (readme.6)
   resetGame = () => {
-    if (this.setState.score > this.setState.highScore) {
+    if (this.state.score > this.state.highScore) {
       this.setState({highScore: this.setState.score})
     }
       this.setState({isClicked: []})
       this.setState({score: 0})
+      this.setState({isCorrect: ""})
+      this.setState({alert: "Click a princess to begin!"})
     } // ==> end resetGame
 
+  // handle alert | reply to user
 
+  // handleClickEvent | 
+    handleClickEvent = Card => {
+      //alert("click 123") 
+    }
 
-// handleClickEvent | 
+  // handle correct guess | increment score
 
-// handle correct guess | increment score, set click: true
+  // handle incorrect guess | 
 
-// handle incorrect guess | 
-
-// hint: begin building a non-functioning static version then add interactions
+  // hint: begin building a non-functioning static version then add interactions
 
   render() {
     return (
       <div>
-        <Header/>
+        <Header alert={this.state.alert} score={this.state.score} highScore={this.state.highScore} />
         <Wrapper>
           {this.state.data.map(data => (
             <Card 
               key={data.id}
               id={data.id}
               image={data.image}
+              handleClickEvent={this.handleClickEvent}
               />
           ))}
           </Wrapper>
