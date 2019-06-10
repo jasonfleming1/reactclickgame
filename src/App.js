@@ -15,16 +15,39 @@ class App extends Component {
     data,
     score: 0,
     highScore: 0,
-  };
+    alert: "Don't click the same princess twice!",
+    isCorrect: "",
+    isClicked: [],
+  }
 
 // componentDidMount | display and shuffle data
-  /*componentDidMount(){
-    this.setState({ data: this.state.data})
-  }*/
+  componentDidMount(){
+    this.setState({ data: this.shuffle(this.state.data)})
+  }
 
 // shuffle data | https://www.frankmitchell.org/2015/01/fisher-yates/
 
+  shuffle = data => {
+    for (let i = data.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = data[i]
+      data[i] = data[j];
+      data[j] = temp;
+    }
+    return data;
+  }
+
+
 // reset game | use .map (readme.6)
+  resetGame = () => {
+    if (this.setState.score > this.setState.highScore) {
+      this.setState({highScore: this.setState.score})
+    }
+      this.setState({isClicked: []})
+      this.setState({score: 0})
+    } // ==> end resetGame
+
+
 
 // handleClickEvent | 
 
@@ -37,7 +60,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <Header/>
         <Wrapper>
           {this.state.data.map(data => (
             <Card 
@@ -52,6 +75,5 @@ class App extends Component {
     );
   }
 }
-
 //================ EXPORTS ================
 export default App;
